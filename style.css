@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.team-section {
+    height: 100vh;
+    display: flex;
+}
+
+.person {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.person:hover {
+    flex: 3;
+}
+
+img:hover {
+    filter: grayscale(60%);
+}
+
+.person.pic {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+.person:hover .person.pic {
+    filter: grayscale(0%);
+}
+
+.person:hover .person-info {
+    opacity: 1;
+    bottom: 60px;
+    transition-delay: .6s;
+}
+
+.person-info {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: .2s;
+}
+
+.person-info h5 {
+    font-size: 20px;
+    color: rgb(167, 219, 22);
+}
+
+.person-info p {
+    color: #cedb11;
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.socialmedia a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #333;
+    background-color: #caeb369c;
+    border-radius: 50%;
+    line-height: 40px;
+    margin: 0 6px;
+    font-size: 18px;
+    transition: .3s linear;
+}
+
+.socialmedia a:hover {
+    color: #ffffffa8;
+    background-color: transparent;
+    transform: scale(1.5);
+}
